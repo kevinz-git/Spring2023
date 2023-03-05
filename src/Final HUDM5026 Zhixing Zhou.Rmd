@@ -175,8 +175,6 @@ ggplot(data = bbctried) +
   geom_histogram(aes(x = c(MinSavings)),fill="lightblue")+xlab("Minimum Savings(UK Pounds)") +ylab("Number of People")+ggtitle("Levels of Minimum Savings(UK Pounds)") # MinSavings 
 
 #build a scatterplot of Minsavings and age to see their corrlelations
-# attach(bbctried)
-# detach(bbctried)
 ggplot(data = bbctried, mapping = aes(x=Age, y =MinSavings)) +
   geom_point(alpha=0.4) +ylab("Levels of \nMinimum Savings(UK Pounds)")+xlab("Age(Year)") +ggtitle("Age's Relation with Wealth Accumulation ")
 
