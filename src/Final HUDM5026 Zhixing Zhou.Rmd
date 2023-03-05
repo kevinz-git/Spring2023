@@ -101,7 +101,7 @@ funm <- function(x) {
 }
 bbctry2<- as.data.frame(mapply(funm,bbctry1)) # use mean to fill the NAs in Income and Age
 na2<-colSums(is.na(bbctry2))
-bbctried<- bbctry2 %>% mutate(across(.cols=1:ncol(bbctry2), .fns=as.numeric)) #mutate, turn every variable as numeric
+bbctried<- bbctry2 %>% mutate(across(.cols=1:ncol(bbctry2), .fns=as.numeric)) #mutate
 
 ```
 
