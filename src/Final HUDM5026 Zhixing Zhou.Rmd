@@ -42,13 +42,7 @@ This analysis will be about exploratory analysis of the data. The statistical me
 
 The graphical methods will include visualization of descriptive data analysis including scatter plot, bar plot, histogram and boxplot. Visualization of correlation includes plotting of correlation coefficients. There're also diagnostic plots for regression.
 
-### *The sample and data cleaning and wrangling process*
-
-The survey data is processed according to notes of the survey  to transform answers of questions to variables. The original data contains various dimensions of personal traits including Demographic variables, Money sanity, emotion regulation, vigilant and avoidant responses to threat, financial knowledge, behavioral inhibition, impulsive buying, adverse financial life events, financial capabilities, etc.
-
-My analysis chose some of these variables. Including the demographic variables( Age, Education, Annual Household Income, Political Orientation, Religiousness, Ethnicity, Gender ), the personal trait variables (Financial Knowledge, Financial Capabilities (including Making Ends Meet, Keeping Track, Planning Ahead, Choosing Products, Staying Informed)), and the dependent variables( Level of Minimum Saving transformed into Minimum Value of Savings). The answer to the questions were processed to attain these variables. There're 109472 observations in total. I filtered those with dependent variable ( Minimum value of Savings ) being NA. After that there're 99636 observations. I then filled NAs in other variables by using the variables' mean.
-
-The descriptive analysis of the variables are as follows.
+(deleted explanations of data wrangling process)
 
 [Cleaning Data]{.underline}
 
