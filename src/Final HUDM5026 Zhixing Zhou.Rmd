@@ -76,7 +76,7 @@ bbc0 <- bbc %>% mutate(across(.cols=where(is.integer), .fns=as.numeric))
 #Selecting Variables
 bbc2<- bbc0[,c(237:239,220,2,6:7,242:243,8,222,226,229,232,236,195:201,241,11,19,20,208:209,210:213,216:219,240)]
 bbctry<- bbc0[,c("q159","wealth2","Age","q3","q6","PoliticOrient","Religiousness","FinancialKnowledge","FCMakingEndsMeet","FCKeepingTrack","FCPlanningAhead","FCChoosingProducts","FCStayingInformed","Ethnicity","female")]
-#the variables' name and information
+#the variables
 
 #Recoding data
 bbctry$q6<-car::recode(bbctry$q6,"1=0;2=10000;3=20000;4=30000;5=40000;6=50000;7=75000;8=150000;else=NA")
@@ -101,7 +101,7 @@ funm <- function(x) {
 }
 bbctry2<- as.data.frame(mapply(funm,bbctry1)) # use mean to fill the NAs in Income and Age
 na2<-colSums(is.na(bbctry2))
-bbctried<- bbctry2 %>% mutate(across(.cols=1:ncol(bbctry2), .fns=as.numeric)) #mutate, turn every variable as numeric
+bbctried<- bbctry2 %>% mutate(across(.cols=1:ncol(bbctry2), .fns=as.numeric)) #mutate
 
 ```
 
