@@ -185,18 +185,17 @@ ggplot(data = bbctried, mapping = aes(group =MinSavings,x=Age, y = MinSavings)) 
   geom_boxplot(width=5000,alpha=0.4,fill="lightblue") +ylab("Levels of \nMinimum Savings(UK Pounds)")+xlab("Age(Year)") +ggtitle("Age's Relation with Wealth Accumulation ")# wealth2 as age increases
 
 #Draw a Barplot to show Education's Relation with Wealth Accumulation
-ggplot(data = bbctried, mapping = aes(x = Education %>%as_factor(), group=MinSavings %>%as_factor(),fill=MinSavings %>%as_factor()))+geom_bar(stat="count",position = "fill")+scale_fill_brewer(palette="GnBu") + labs(fill = "Levels of \nMinimum Savings(UK Pounds)")+ylab("Percentage of People") + xlab("Level of Education")+scale_x_discrete(labels=c('no Olevels', 'Olevels', 'Post-16 Vocational','ALevels','Undergraduate','PostGraduate'))+ggtitle("Education's Relation with Wealth Accumulation")
+ggplot(data = bbctried, mapping = aes(x = Education %>%as_factor(), group=MinSavings %>%as_factor(),fill=MinSavings %>%as_factor()))+geom_bar(stat="count",position = "fill")+scale_fill_brewer(palette="GnBu") + labs(fill = "Levels of \nMinimum Savings(UK Pounds)")+ylab("Percentage of People") + xlab("Level of Education")+scale_x_discrete(labels=c('no Olevels', 'Olevels', 'Post-16 Vocational','ALevels','Undergraduate','PostGraduate'))
 
 #boxplot of Minsavings and Financial Knowledge
 ggplot(data = bbctried, mapping = aes(group =MinSavings,x=FinancialKnowledge, y = MinSavings)) +
-  geom_boxplot(width=5000,alpha=0.4,fill="lightblue")+ylab("Levels of \nMinimum Savings(UK Pounds)")+xlab("Financial Knowledge") +ggtitle("Financial Knowledge's Relation with Wealth Accumulation ")
+  geom_boxplot(width=5000,alpha=0.4,fill="lightblue")+ylab("Levels of \nMinimum Savings(UK Pounds)")+xlab("Financial Knowledge") 
 
 #boxplot of Minsavings and Financial Capabilities
 ggplot(data = bbctried, mapping = aes(group =MinSavings,x=FinancialCapabilities, y = MinSavings)) +
-  geom_boxplot(width=5000,alpha=0.4,fill="lightblue")+ylab("Levels of \nMinimum Savings(UK Pounds)")+xlab("Financial Capabilities") +ggtitle("Financial Capabilities' Relation and Wealth Accumulation ")
+  geom_boxplot(width=5000,alpha=0.4,fill="lightblue")+ylab("Levels of \nMinimum Savings(UK Pounds)")+xlab("Financial Capabilities") 
 
-
-
+#titles of the plot deleted
 ```
 
 [Regression Analysis]{.underline}
