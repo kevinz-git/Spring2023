@@ -125,11 +125,11 @@ n<- mapply(function(x){
 stat2<-cbind(stat2,n)
 Mean<-mapply(mean,bbctried,na.rm=TRUE)
 Std.Deviation<-mapply(sd,bbctried,na.rm=TRUE)
-stat3<-data.frame(Mean,Std.Deviation)
-stat3<- stat3 %>% mutate(Var=Std.Deviation^2)
+stat3<-data.frame(Mean,Std.Deviation) %>% mutate(Var=Std.Deviation^2)
 n<- mapply(function(x){
   sum(!is.na(x))}, bbctried) 
 stat3<-cbind(stat3,n)
+#data wrangling
 
 ```
 
