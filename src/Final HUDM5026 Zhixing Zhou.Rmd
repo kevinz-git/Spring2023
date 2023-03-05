@@ -76,11 +76,7 @@ bbc0 <- bbc %>% mutate(across(.cols=where(is.integer), .fns=as.numeric))
 #Selecting Variables
 bbc2<- bbc0[,c(237:239,220,2,6:7,242:243,8,222,226,229,232,236,195:201,241,11,19,20,208:209,210:213,216:219,240)]
 bbctry<- bbc0[,c("q159","wealth2","Age","q3","q6","PoliticOrient","Religiousness","FinancialKnowledge","FCMakingEndsMeet","FCKeepingTrack","FCPlanningAhead","FCChoosingProducts","FCStayingInformed","Ethnicity","female")]
-#datasets includes three parts, dependent variable, independent variable, dummy variable
-##Personal wealth: the average level of three personal wealth variables, which can only be used after levels of NA has been filtered.
-##wealth 1/2/3: the minimum value of the person's level of certain wealth. Wealth less than 0 are regarded same as 0~500.
-## We should choose wealth2, it is savings and financial investments
-#Financial Capabilities: the sum of all related questions' level.
+#the variables' name and information
 
 #Recoding data
 bbctry$q6<-car::recode(bbctry$q6,"1=0;2=10000;3=20000;4=30000;5=40000;6=50000;7=75000;8=150000;else=NA")
